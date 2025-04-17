@@ -17,7 +17,7 @@ function AppContent() {
   const [setIsAuthenticated] = useState(false);
 
   // ✅ Ambil URL dari environment variable
-  const backendURL = import.meta.env.VITE_BACKEND_URL;
+  const backendURL = 'https://backend-production-5845.up.railway.app';
 
   useEffect(() => {
     axios

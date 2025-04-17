@@ -1,6 +1,6 @@
 import React from 'react';
 import section1Img1 from '../../assets/section1Img1.png';
-import section1Img2 from '../../assets/section1Img2.png';
+import section1Img2 from '../../assets/section1img2.png';
 import section1Img3 from '../../assets/section1Img3.png';
 
 const Section1 = () => {

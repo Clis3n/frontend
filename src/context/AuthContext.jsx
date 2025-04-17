@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch('http://localhost:5000/auth/user', { credentials: 'include' });
+        const res = await fetch('https://backend-production-5845.up.railway.app/auth/user', { credentials: 'include' });
         if (!res.ok) throw new Error('Failed to fetch user');
         const data = await res.json();
         if (data.user) setUser(data.user);
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
   // Fungsi logout
   const logout = async () => {
     try {
-      const res = await fetch('http://localhost:5000/auth/logout', { method: 'GET', credentials: 'include' });
+      const res = await fetch('https://backend-production-5845.up.railway.app/auth/logout', { method: 'GET', credentials: 'include' });
       if (!res.ok) throw new Error('Logout failed');
       setUser(null);
       window.location.href = '/';

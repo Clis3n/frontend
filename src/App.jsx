@@ -14,10 +14,8 @@ import logoFlexnative from './assets/logoFlexnative.png';
 
 function AppContent() {
   const { isLoading } = useContext(AuthContext);
-  const [setIsAuthenticated] = useState(false);
-
-  // ✅ Ambil URL dari environment variable
-  const backendURL = 'https://backend-production-5845.up.railway.app';
+  const [, setIsAuthenticated] = useState(false); // ✔️ fixed
+  const backendURL = import.meta.env.VITE_API_URL; // ✔️ pakai env var
 
   useEffect(() => {
     axios
@@ -28,7 +26,7 @@ function AppContent() {
         }
       })
       .catch(() => setIsAuthenticated(false));
-  }, [backendURL, setIsAuthenticated]);
+  }, [backendURL]);
 
   if (isLoading) return <img src={logoFlexnative} alt="Load" />;
 

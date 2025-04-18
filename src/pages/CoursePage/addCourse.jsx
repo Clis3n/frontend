@@ -7,7 +7,7 @@ function AddCourse() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:5000/api/courses', course)
+      .post('https://backend-production-5845.up.railway.app/api/courses', course)
       .then(() => alert('Course added successfully!'))
       .catch((err) => console.error(err));
   };

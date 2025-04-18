@@ -308,7 +308,7 @@ function Courses() {
     }
 
     axios
-      .get('http://localhost:5000/api/courses')
+      .get('https://backend-production-5845.up.railway.app/api/courses')
       .then((res) => {
         const merged = [...res.data, ...defaultCourses];
         const uniqueCourses = merged.filter((c, i, self) => self.findIndex((item) => item._id === c._id) === i);
